@@ -6,7 +6,7 @@
 /*   By: christian.rasche <christian.rasche@stud      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/11/09 14:58:12 by christian.r   #+#    #+#                 */
-/*   Updated: 2025/01/03 19:01:46 by christian.r   ########   odam.nl         */
+/*   Updated: 2025/01/06 18:36:49 by crasche       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ class AAnimal {
 protected:
 	std::string		_type;
 public:
+	// Constructors
+	AAnimal();
 	// Destructor
 	virtual ~AAnimal();
 
