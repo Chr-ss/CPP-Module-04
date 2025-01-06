@@ -20,6 +20,26 @@ Brain::Brain()
 	std::cout << BLUE << "Brain constructor for called." << RESET << std::endl;
 }
 
+// Copy Constructor
+Brain::Brain(const Brain &toCopy)
+{
+	for (int i = 0; i < 100; i++)
+		ideas[i] = toCopy.ideas[i];
+	std::cout << BLUE << "Copy Constructor called." << RESET << std::endl;
+}
+
+// Copy Assignment Operator
+Brain& Brain::operator=(const Brain &other)
+{
+	if (this != &other)
+	{
+		for (int i = 0; i < 100; i++)
+			ideas[i] = other.ideas[i];
+	}
+	std::cout << BLUE << "Copy Assignment Operator called." << RESET << std::endl;
+	return (*this);
+}
+
 // Destructor
 Brain::~Brain()
 {

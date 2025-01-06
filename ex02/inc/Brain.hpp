@@ -6,7 +6,7 @@
 /*   By: christian.rasche <christian.rasche@stud      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/11/09 14:58:12 by christian.r   #+#    #+#                 */
-/*   Updated: 2025/01/03 15:08:45 by christian.r   ########   odam.nl         */
+/*   Updated: 2025/01/06 16:15:35 by crasche       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,13 +52,9 @@ public:
 	~Brain();
 
 	// Copy Constructor
-	Brain(const Brain &toCopy) = default;
+	Brain(const Brain &toCopy);
 	// Copy assignment operator
-	Brain& operator=(const Brain &other) = default;
-	// Move Constructor
-	Brain(Brain&& other) noexcept = default;
-	// Move Assignment Operator
-	Brain& operator=(Brain&& other) noexcept = default;
+	Brain& operator=(const Brain &other);
 
 	// Setters
 	void setIdea(unsigned int index, std::string idea);

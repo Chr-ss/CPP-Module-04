@@ -1,7 +1,7 @@
 NAME		=	animal
 RM			=	rm -rf
 CPP			=	c++
-CPPFLAGS	=	-Wall -Wextra -Werror -std=c++11
+CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 SRCDIR		=	src
 SRC			=	$(shell find $(SRCDIR) -iname "*.cpp")

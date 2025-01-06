@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Brain.hpp                                          :+:    :+:            */
+/*   WrongAnimal.hpp                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: christian.rasche <christian.rasche@stud      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/11/09 14:58:12 by christian.r   #+#    #+#                 */
-/*   Updated: 2025/01/06 16:13:37 by crasche       ########   odam.nl         */
+/*   Updated: 2025/01/06 16:29:26 by crasche       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef Brain_HPP
-# define Brain_HPP
+#ifndef WrongAnimal_HPP
+# define WrongAnimal_HPP
 
 # include <cctype>
 # include <iostream>
@@ -42,25 +42,26 @@
 # define BOLD           "\033[1m"
 # define UNDERLINE      "\033[4m"
 
-class Brain {
-private:
-	std::string		ideas[100];
+
+class WrongAnimal {
+protected:
+	std::string		_type;
 public:
 	// Constructor
-	Brain();
+	WrongAnimal();
 	// Destructor
-	~Brain();
+	virtual ~WrongAnimal();
 
 	// Copy Constructor
-	Brain(const Brain &toCopy);
+	WrongAnimal(const WrongAnimal &toCopy);
 	// Copy assignment operator
-	Brain& operator=(const Brain &other);
+	WrongAnimal& operator=(const WrongAnimal &other);
 
-	// Setters
-	void setIdea(unsigned int index, std::string idea);
+	// getter
+	std::string getType(void) const;
 	// Public functions
-	void getIdeas() const;
+	void makeSound(void) const;
 };
 
 
-#endif // Brain_HPP
+#endif // WrongAnimal_HPP

@@ -6,7 +6,7 @@
 /*   By: christian.rasche <christian.rasche@stud      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/11/09 14:58:12 by christian.r   #+#    #+#                 */
-/*   Updated: 2025/01/03 15:08:45 by christian.r   ########   odam.nl         */
+/*   Updated: 2025/01/06 16:13:33 by crasche       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,13 +53,9 @@ public:
 	virtual ~Animal();
 
 	// Copy Constructor
-	Animal(const Animal &toCopy) = default;
+	Animal(const Animal &toCopy);
 	// Copy assignment operator
-	Animal& operator=(const Animal &other) = default;
-	// Move Constructor
-	Animal(Animal&& other) noexcept = default;
-	// Move Assignment Operator
-	Animal& operator=(Animal&& other) noexcept = default;
+	Animal& operator=(const Animal &other);
 
 	// getters
 	std::string getType(void) const;

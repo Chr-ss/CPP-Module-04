@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Animal.cpp                                         :+:    :+:            */
+/*   WrongCat.cpp                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: christian.rasche <christian.rasche@stud      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/11/09 14:58:18 by christian.r   #+#    #+#                 */
-/*   Updated: 2025/01/06 16:13:05 by crasche       ########   odam.nl         */
+/*   Updated: 2025/01/06 16:30:00 by crasche       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Animal.hpp"
+#include "../inc/WrongCat.hpp"
 
 // Constructor
-Animal::Animal() : _type("Animal")
+WrongCat::WrongCat() : WrongAnimal()
 {
-	std::cout << BLUE << "Animal constructor for called." << RESET << std::endl;
-}
-
-// Destructor
-Animal::~Animal()
-{
-	std::cout << RED << "Animal destructor called." << RESET << std::endl;
+	_type = "WrongCat";
+	std::cout << BLUE << "WrongCat constructor for called." << RESET << std::endl;
 }
 
 // Copy Constructor
-Animal::Animal(const Animal &toCopy) : _type(toCopy._type)
+WrongCat::WrongCat(const WrongCat &toCopy) : WrongAnimal(toCopy)
 {
 	std::cout << BLUE << "Copy Constructor called." << RESET << std::endl;
 }
 
 // Copy Assignment Operator
-Animal& Animal::operator=(const Animal &other)
+WrongCat& WrongCat::operator=(const WrongCat &other)
 {
 	if (this != &other)
 	{
@@ -41,13 +36,13 @@ Animal& Animal::operator=(const Animal &other)
 	return (*this);
 }
 
-// Getter
-std::string	Animal::getType() const
+// Destructor
+WrongCat::~WrongCat()
 {
-	return (_type);
+	std::cout << RED << "WrongCat destructor called." << RESET << std::endl;
 }
 
-void	Animal::makeSound() const
+void	WrongCat::makeSound() const
 {
-	std::cout << _type << " undecided.. *no sounds*" << std::endl;
+	std::cout << "\"*A wrong cat sound!*\"" << std::endl;
 }

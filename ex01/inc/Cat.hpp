@@ -6,7 +6,7 @@
 /*   By: christian.rasche <christian.rasche@stud      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/11/09 14:58:12 by christian.r   #+#    #+#                 */
-/*   Updated: 2025/01/03 15:09:26 by christian.r   ########   odam.nl         */
+/*   Updated: 2025/01/06 16:13:39 by crasche       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,7 @@ public:
 	// Copy Constructor
 	Cat(const Cat &toCopy);
 	// Copy assignment operator
-	Cat& operator=(const Cat &other) = default;
-	// Move Constructor
-	Cat(Cat&& other) noexcept = default;
-	// Move Assignment Operator
-	Cat& operator=(Cat&& other) noexcept = default;
+	Cat& operator=(const Cat &other);
 
 	//	Setters
 	void	setIdea(unsigned int index, std::string idea);

@@ -1,43 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Dog.hpp                                            :+:    :+:            */
+/*   WrongCat.hpp                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: christian.rasche <christian.rasche@stud      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/11/09 14:58:12 by christian.r   #+#    #+#                 */
-/*   Updated: 2025/01/06 16:13:42 by crasche       ########   odam.nl         */
+/*   Updated: 2025/01/06 16:29:37 by crasche       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef WrongCat_HPP
+# define WrongCat_HPP
 
 # include <cctype>
 # include <iostream>
-# include "Animal.hpp"
-# include "Brain.hpp"
+# include "WrongAnimal.hpp"
 
-class Dog : public Animal {
+class WrongCat : public WrongAnimal {
 private:
-	Brain*	_brain;
+	std::string _type;
 public:
 	// Constructor
-	Dog();
+	WrongCat();
 	// Destructor
-	~Dog();
+	~WrongCat();
 
 	// Copy Constructor
-	Dog(const Dog &toCopy);
+	WrongCat(const WrongCat &toCopy);
 	// Copy assignment operator
-	Dog& operator=(const Dog &other);
+	WrongCat& operator=(const WrongCat &other);
 
-	//	Setters
-	void	setIdea(unsigned int index, std::string idea);
 	// Public functions
 	void	makeSound() const;
-	void	getIdeas() const;
 };
 
 
-#endif // DOG_HPP
+#endif // WrongCat_HPP

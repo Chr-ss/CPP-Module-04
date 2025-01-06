@@ -6,7 +6,7 @@
 /*   By: christian.rasche <christian.rasche@stud      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/11/09 14:58:12 by christian.r   #+#    #+#                 */
-/*   Updated: 2025/01/06 16:12:17 by crasche       ########   odam.nl         */
+/*   Updated: 2025/01/06 16:23:46 by crasche       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 # include "Animal.hpp"
 
 class Cat : public Animal {
-private:
-
 public:
 	// Constructor
 	Cat();

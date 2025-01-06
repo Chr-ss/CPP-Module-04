@@ -6,7 +6,7 @@
 /*   By: crasche <crasche@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/11/07 16:36:52 by crasche       #+#    #+#                 */
-/*   Updated: 2025/01/03 19:05:34 by christian.r   ########   odam.nl         */
+/*   Updated: 2025/01/06 16:16:13 by crasche       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,24 +85,24 @@ int main(void)
 			delete(animals[i]);
 	}
 	{
-	std::cout << BOLD << UNDERLINE << "\n\tTEST 8 (deep dopy test):" << RESET << std::endl;
-	Dog *a = new Dog();
+		std::cout << BOLD << UNDERLINE << "\n\tTEST 8 (deep dopy test):" << RESET << std::endl;
+		Dog *a = new Dog();
 
-	a->setIdea(0, "I have to sniff it");
-	a->setIdea(1, "I have to pee on it");
-	a->setIdea(2, "I have to sniff it again");
-	a->setIdea(3, "I have to pee on it again");
-	a->setIdea(101, "this is not possible");
+		a->setIdea(0, "I have to sniff it");
+		a->setIdea(1, "I have to pee on it");
+		a->setIdea(2, "I have to sniff it again");
+		a->setIdea(3, "I have to pee on it again");
+		a->setIdea(101, "this is not possible");
 
-	Dog *b = new Dog(*a);
-	
-	std::cout << "\tThe " << a->getType() << " a has the following ideas: " << std::endl;
-	a->getIdeas();
-	delete(a);
-	std::cout << std::endl;
+		Dog *b = new Dog(*a);
 
-	std::cout << "\tThe " << b->getType() << " b has the following ideas: " << std::endl;
-	b->getIdeas();
-	delete(b);
+		std::cout << "\tThe " << a->getType() << " a has the following ideas: " << std::endl;
+		a->getIdeas();
+		delete(a);
+		std::cout << std::endl;
+
+		std::cout << "\tThe " << b->getType() << " b has the following ideas: " << std::endl;
+		b->getIdeas();
+		delete(b);
 	}
 }

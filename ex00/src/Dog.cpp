@@ -6,7 +6,7 @@
 /*   By: christian.rasche <christian.rasche@stud      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/11/09 14:58:18 by christian.r   #+#    #+#                 */
-/*   Updated: 2025/01/06 15:22:20 by crasche       ########   odam.nl         */
+/*   Updated: 2025/01/06 16:13:15 by crasche       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,24 +33,6 @@ Dog& Dog::operator=(const Dog &other)
 		_type = other._type;
 	}
 	std::cout << BLUE << "Copy Assignment Operator called." << RESET << std::endl;
-	return (*this);
-}
-
-// Move Constructor
-Dog::Dog(Dog&& other) noexcept : Animal(std::move(other))
-{
-	std::cout << BLUE << "Move Constructor called." << RESET << std::endl;
-}
-
-// Move Assignment Operator
-Dog& Dog::operator=(Dog&& other) noexcept
-{
-	if (this != &other)
-	{
-		_type = std::move(other._type);
-	}
-	other._type = "";
-	std::cout << BLUE << "Move Assignment Operator called." << RESET << std::endl;
 	return (*this);
 }
 
