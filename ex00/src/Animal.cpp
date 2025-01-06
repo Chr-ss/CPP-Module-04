@@ -6,7 +6,7 @@
 /*   By: christian.rasche <christian.rasche@stud      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/11/09 14:58:18 by christian.r   #+#    #+#                 */
-/*   Updated: 2025/01/03 13:45:23 by christian.r   ########   odam.nl         */
+/*   Updated: 2025/01/06 10:12:14 by christian.r   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,23 @@ std::string	Animal::getType() const
 
 void	Animal::makeSound() const
 {
-	std::cout << "Animal undecided.. *no sounds*" << std::endl;
+	std::cout << _type << " undecided.. *no sounds*" << std::endl;
+}
+
+// Move Constructor
+Animal::Animal(Animal&& other) : _type(other._type)
+{
+	other._type = "NULL";
+	std::cout << "Move Constructor called\n";
+}
+
+// Move Assignment Operator
+Animal& Animal::operator=(Animal&& other)
+{
+	if (this != &other)
+	{
+		_type = std::move(other._type);
+	}
+	std::cout << "Move Assignment Operator called\n";
+	return (*this);
 }

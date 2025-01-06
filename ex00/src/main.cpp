@@ -6,7 +6,7 @@
 /*   By: crasche <crasche@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/11/07 16:36:52 by crasche       #+#    #+#                 */
-/*   Updated: 2025/01/03 13:48:20 by christian.r   ########   odam.nl         */
+/*   Updated: 2025/01/06 10:13:54 by christian.r   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,19 @@ int main(void)
 		dog1.makeSound();
 	}
 	{
-		std::cout << "\n\tTEST 5 (Subject test):" << std::endl;
+		std::cout << "\n\tTEST 5 (default test):" << std::endl;
+		Animal animal = Animal();
+		
+		animal.makeSound();
+		Animal newanimal;
+		
+		newanimal = std::move(animal);
+		newanimal.makeSound();
+		animal.makeSound();
+		std::cout << std::endl;
+	}
+	{
+		std::cout << "\n\tTEST 6 (Subject test):" << std::endl;
 		const Animal* meta = new Animal();
 		const Animal* j = new Dog();
 		const Animal* i = new Cat();
@@ -48,6 +60,12 @@ int main(void)
 		j->makeSound();
 		meta->makeSound();
 		std::cout << std::endl;
+
+
+		delete meta;
+		delete j;
+		delete i;
 	}
+
 	return (0);
 }
